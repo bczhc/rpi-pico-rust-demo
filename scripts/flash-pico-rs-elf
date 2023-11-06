@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -e
+
+elf2uf2-rs "$1" /tmp/output.uf2
+sudo "`dirname "$0"`"/flash-pico /tmp/output.uf2
