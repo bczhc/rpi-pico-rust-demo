@@ -1,0 +1,32 @@
+[package]
+name = "pico-rs"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+cortex-m-rt = "0.7.3"
+panic-halt = "0.2.0"
+rp-pico = "0.8.0"
+cortex-m = "0.7.7"
+embedded-hal = "0.2.7"
+fugit = "0.3.7"
+rp2040-hal = "0.9.0"
+critical-section = "1.1.2"
+heapless = "0.7.16"
+alloc-cortex-m = "0.4.4"
+rp2040-boot2 = "0.3.0"
+hex = { version = "0.4.3", default-features = false }
+digest = { version = "0.10.7", default-features = false }
+sha2 = { version = "0.10.8", default-features = false }
+
+[[bin]]
+name = "1"
+path = "src/1.rs"
+
+#[[bin]]
+#name = "2"
+#path = "src/2.rs"
+#
+#[[bin]]
+#name = "3"
+#path = "src/3.rs"
