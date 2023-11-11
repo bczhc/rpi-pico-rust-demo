@@ -6,6 +6,7 @@ use alloc_cortex_m::CortexMHeap;
 use rp2040_hal::pac::Peripherals;
 
 pub mod hash;
+pub mod rng;
 
 pub fn peripherals() -> Peripherals {
     Peripherals::take().unwrap()
