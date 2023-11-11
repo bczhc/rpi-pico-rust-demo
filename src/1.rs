@@ -13,6 +13,7 @@ use bitcoin::{Address, Network, PrivateKey};
 use cortex_m_rt::entry;
 use digest::Digest;
 use embedded_hal::digital::v2::OutputPin;
+use embedded_hal::prelude::_embedded_hal_blocking_delay_DelayMs;
 #[allow(unused_imports)]
 use panic_halt as _;
 use rand::{Error, RngCore};
@@ -48,6 +49,7 @@ fn main() -> ! {
 
     let k1 = Secp256k1::new();
     loop {
+        led_hint!();
         let secret = random_secret();
         let private_key =
             PrivateKey::new(SecretKey::from_slice(&secret).unwrap(), Network::Bitcoin);
